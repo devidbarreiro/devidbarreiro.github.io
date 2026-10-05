@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>fog-of-spain — Política de privacidad</title>
-<meta name="description" content="Política de privacidad de fog-of-spain: tus datos se quedan en tu móvil.">
+<meta name="description" content="Política de privacidad de fog-of-spain: tu rastro se queda en tu móvil; la cuenta es opcional.">
 <style>
   :root { --bg:#0B0E14; --card:#131826; --text:#E8EAF0; --muted:#9AA1B2; --accent:#F2C230; }
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -24,40 +24,59 @@
 <body>
 <main>
   <h1>Política de privacidad</h1>
-  <p class="updated">fog-of-spain · Última actualización: 28 de septiembre de 2026</p>
+  <p class="updated">fog-of-spain · Última actualización: 5 de octubre de 2026</p>
 
   <div class="highlight">
-    <p><strong>Resumen:</strong> fog-of-spain no tiene cuentas, ni servidores propios, ni analítica. Tu ubicación y tu progreso se procesan y se guardan únicamente en tu dispositivo. No recopilamos, vendemos ni compartimos tus datos personales.</p>
+    <p><strong>Resumen:</strong> tu ubicación y por dónde pasas se procesan y se guardan únicamente en tu dispositivo, y nunca salen de él. La cuenta es opcional: si la creas para competir en el ranking y seguir a otros jugadores, solo se comparten tu nombre de jugador, tu avatar, tu municipio y tus cifras de juego. Sin analítica, sin publicidad, sin venta de datos.</p>
   </div>
 
   <h2>Responsable</h2>
   <p>David Barreiro Gallego · <a href="mailto:dev.idbarreiro@gmail.com">dev.idbarreiro@gmail.com</a></p>
 
-  <h2>Qué datos usa la app y dónde se quedan</h2>
+  <h2>Qué datos se quedan siempre en tu dispositivo</h2>
   <ul>
-    <li><strong>Ubicación (GPS):</strong> se usa para despejar la niebla del mapa por donde te mueves. Se procesa y se almacena exclusivamente en tu dispositivo. Nunca se envía a nuestros servidores (no tenemos servidores).</li>
+    <li><strong>Ubicación (GPS):</strong> se usa para despejar la niebla del mapa por donde te mueves. Se procesa y se almacena exclusivamente en tu dispositivo. Ni las coordenadas, ni las zonas despejadas, ni las fechas de tus visitas se envían nunca a ningún servidor.</li>
     <li><strong>Ubicación en segundo plano:</strong> solo si la activas expresamente. Puedes desactivarla en cualquier momento desde Ajustes o desde los ajustes de iOS.</li>
     <li><strong>Fotos:</strong> si usas la importación de historial, la app lee únicamente los metadatos de ubicación de tus fotos, en tu dispositivo. Las imágenes no se suben ni salen de tu móvil.</li>
     <li><strong>Archivos GPX / Google Takeout:</strong> se procesan localmente en tu dispositivo.</li>
     <li><strong>Progreso y logros:</strong> se guardan en el almacenamiento local de la app. Si borras la app, se borran.</li>
   </ul>
 
+  <h2>Cuenta opcional (ranking, perfil y seguir a otros jugadores)</h2>
+  <p>Puedes jugar sin cuenta. Si decides crearla, inicias sesión con <strong>Iniciar sesión con Apple</strong>; no pedimos a Apple ni tu nombre ni tu email. Con la cuenta se guardan en nuestro servidor:</p>
+  <ul>
+    <li>Un identificador de usuario anónimo (no contiene tu nombre ni tu email).</li>
+    <li>El <strong>nombre de jugador</strong> que eliges, tu <strong>avatar</strong> y el <strong>municipio</strong> que declaras como tuyo (no se deduce de tu ubicación).</li>
+    <li>Tus <strong>cifras de juego agregadas</strong>: nivel, superficie y porcentaje descubiertos, número de municipios y provincias, porcentaje descubierto por provincia, retos completados y logros conseguidos.</li>
+    <li>A quién sigues, quién te sigue, los jugadores que bloqueas y los reportes que envías.</li>
+    <li>La actividad que se genera a partir de tus cifras (por ejemplo, «ha descubierto Asturias» o «nivel 10»), visible para quien te sigue.</li>
+  </ul>
+  <p>Tu nombre de jugador, avatar, municipio, cifras, logros y seguidores son <strong>públicos</strong> para los demás jugadores: aparecen en el ranking y en tu perfil. Nunca se publica ni se envía por dónde has pasado.</p>
+  <p><strong>Ver el ranking sin cuenta:</strong> para poder consultar el ranking y los perfiles sin registrarte, la app crea un identificador de invitado anónimo cuando abres esas pantallas. No está asociado a ningún dato tuyo y no permite publicar nada.</p>
+
+  <h2>Borrar tu cuenta</h2>
+  <p>Desde la app, en Ajustes → Cuenta → «Borrar cuenta». Se eliminan tu perfil, tus cifras, tus seguimientos y tu actividad, y se revoca el acceso de la app a tu Apple ID. Tu progreso en el dispositivo no se toca. También puedes pedirlo por email.</p>
+
   <h2>Qué NO hacemos</h2>
   <ul>
-    <li>No pedimos registro ni cuenta.</li>
-    <li>No usamos herramientas de analítica ni de publicidad.</li>
+    <li>No enviamos a ningún servidor tu ubicación ni tus rutas.</li>
+    <li>No usamos herramientas de analítica ni de publicidad, ni te rastreamos entre apps.</li>
     <li>No vendemos ni cedemos datos a terceros.</li>
     <li>No accedemos a tus contactos, cámara ni micrófono.</li>
   </ul>
 
-  <h2>Servicios de terceros: mapas</h2>
-  <p>La app muestra mapas de <strong>Mapbox</strong>. Para descargar los mapas, tu dispositivo se conecta a los servidores de Mapbox, que pueden recibir datos técnicos como tu dirección IP y datos de uso del SDK conforme a su propia política de privacidad: <a href="https://www.mapbox.com/legal/privacy" rel="noopener">mapbox.com/legal/privacy</a>. fog-of-spain no envía a Mapbox tu historial de niebla ni tu progreso.</p>
+  <h2>Proveedores que tratan datos por nosotros</h2>
+  <ul>
+    <li><strong>Firebase Authentication</strong> (Google): gestiona el inicio de sesión y el identificador de usuario. <a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></li>
+    <li><strong>Neon</strong>: base de datos donde se guardan los datos de la cuenta descritos arriba, alojada en la Unión Europea (Frankfurt). <a href="https://neon.com/privacy-policy" rel="noopener">neon.com/privacy-policy</a></li>
+    <li><strong>Mapbox</strong>: muestra los mapas. Para descargarlos, tu dispositivo se conecta a los servidores de Mapbox, que pueden recibir datos técnicos como tu dirección IP y datos de uso del SDK. fog-of-spain no envía a Mapbox tu historial de niebla ni tu progreso. <a href="https://www.mapbox.com/legal/privacy" rel="noopener">mapbox.com/legal/privacy</a></li>
+  </ul>
 
   <h2>Tus derechos</h2>
-  <p>Como los datos viven solo en tu dispositivo, tú tienes el control total: puedes eliminarlos borrando la app. Para cualquier consulta sobre privacidad (incluidos los derechos de acceso, rectificación o supresión que reconoce el RGPD), escríbenos a <a href="mailto:dev.idbarreiro@gmail.com">dev.idbarreiro@gmail.com</a>.</p>
+  <p>Los datos de tu dispositivo los controlas tú: puedes exportarlos o borrarlos desde Ajustes, o borrando la app. Los datos de la cuenta los puedes cambiar o borrar desde la app. Para cualquier consulta sobre privacidad (incluidos los derechos de acceso, rectificación o supresión que reconoce el RGPD), escríbenos a <a href="mailto:dev.idbarreiro@gmail.com">dev.idbarreiro@gmail.com</a>.</p>
 
   <h2>Menores</h2>
-  <p>La app no está dirigida específicamente a menores de 13 años y no recopila datos personales de ningún usuario.</p>
+  <p>La app no está dirigida a menores de 13 años. Si eres menor, no crees una cuenta sin permiso de tus padres o tutores.</p>
 
   <h2>Cambios en esta política</h2>
   <p>Si esta política cambia, publicaremos la versión actualizada en esta misma página con su fecha de revisión.</p>
