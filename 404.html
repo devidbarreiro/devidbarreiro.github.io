@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fog of Spain</title>
+<meta name="description" content="Despeja España pueblo a pueblo.">
+<style>
+  :root { --bg:#0B0E14; --card:#131826; --text:#E8EAF0; --muted:#9AA1B2; --accent:#F2C230; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.6; padding:16px; min-height:100vh; display:flex; align-items:center; justify-content:center; }
+  main { max-width:420px; width:100%; text-align:center; }
+  .marca { color:var(--accent); letter-spacing:.3em; font-weight:800; font-size:.8rem; margin-bottom:28px; }
+  h1 { font-size:1.9rem; line-height:1.2; margin-bottom:10px; }
+  .usuario { color:var(--accent); }
+  p { color:var(--muted); margin-bottom:28px; }
+  .boton { display:block; padding:16px; border-radius:16px; font-weight:800; text-decoration:none; margin-bottom:12px; font-size:1.05rem; }
+  .principal { background:var(--accent); color:var(--bg); }
+  .secundario { background:var(--card); color:var(--text); }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div class="marca">FOG OF SPAIN</div>
+
+  <section id="invitacion" hidden>
+    <h1><span class="usuario" id="usuario"></span> te invita a despejar España</h1>
+    <p>Sígueos, comparad vuestros mapas y competid en el ranking de vuestro municipio.</p>
+    <a class="boton principal" id="abrir" href="#">Abrir en la app</a>
+    <a class="boton secundario" href="https://apps.apple.com/app/id6816008244">Descargar Fog of Spain</a>
+  </section>
+
+  <section id="no-existe" hidden>
+    <h1>Esta página no existe</h1>
+    <p>Pero España sigue en la niebla.</p>
+    <a class="boton secundario" href="/fogofspain/">Ir a Fog of Spain</a>
+  </section>
+</main>
+<script>
+  // /fogofspain/u/<usuario>: invitación. Si la app está instalada, el universal
+  // link ya la habrá abierto; si no, esta página ofrece abrirla o descargarla.
+  (function () {
+    var m = /^\/fogofspain\/u\/@?([a-z0-9_.]{3,20})\/?$/i.exec(location.pathname);
+    if (!m) { document.getElementById('no-existe').hidden = false; return; }
+    var usuario = m[1].toLowerCase();
+    document.getElementById('usuario').textContent = '@' + usuario;
+    document.getElementById('abrir').href = 'fogofspain://u/' + encodeURIComponent(usuario);
+    document.title = '@' + usuario + ' te invita · Fog of Spain';
+    document.getElementById('invitacion').hidden = false;
+  })();
+</script>
+</body>
+</html>

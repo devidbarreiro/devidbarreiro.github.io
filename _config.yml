@@ -1,3 +1,6 @@
 theme: jekyll-theme-minimal
 title: Octocat's homepage
 description: Bookmark this to keep an eye on my project updates!
+
+# Universal links de Fog of Spain (Jekyll ignora las carpetas con punto)
+include: [".well-known"]

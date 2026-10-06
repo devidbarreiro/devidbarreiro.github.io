@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["8PQGRCGT8J.com.devidbarreiro.fogofspain"],
+        "components": [
+          { "/": "/fogofspain/u/*", "comment": "Fog of Spain: invitación a seguir a un jugador" }
+        ]
+      }
+    ]
+  }
+}
